@@ -1,0 +1,13 @@
+npm install nodemon --save-dev
+npm install express
+npm install sqlite3
+npm install knex
+npx knex init
+
+npm install cross-env --save-dev
+
+npx knex migrate:latest --env=testing [run migration for testing environment]
+
+
+npm install jest --save-dev
+npm install supertest --save-dev
