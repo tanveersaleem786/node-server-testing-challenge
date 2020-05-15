@@ -33,7 +33,7 @@ router.post("/", async (req, res, next) => {
                     } else {
 
                         let user = await userModel.find({username}).first()
-                        console.log(user)
+                       // console.log(user)
                         if(user) {
 
                             res.status(404).json({message: "Username already taken"})
@@ -54,7 +54,7 @@ router.post("/", async (req, res, next) => {
                                 }
             
                                 const [id] = await userModel.create(payload)
-                                const user = await userModel.find({id})
+                                const user = await userModel.find({id}).first()
                                 res.status(201).json(user)
 
                             }
